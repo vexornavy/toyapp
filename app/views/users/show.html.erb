@@ -13,7 +13,7 @@
 <p>
   <% if @user.microposts.first %>
     <strong>first post:</strong>
-    <%= @user.try(:microposts).try(:first).try(:content) %></n>
+    <%= @user.microposts.first.content %></n>
     o7o7o7o7o -<%= @user.name %>
   <% end %>
 </p>
