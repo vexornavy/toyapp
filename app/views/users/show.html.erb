@@ -14,7 +14,9 @@
   <strong>first post:</strong>
   <%= @user.try(:microposts).try(:first).try(:content) %></n>
   
-  o7o7o7o7 -<%= @user.name %>
+  <% if @user.microposts.first %>
+    o7o7o7o7o -<%= @user.name %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
